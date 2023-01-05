@@ -7,6 +7,37 @@ body{
     font-family: 'Roboto';
 }
 
+
+#minus{
+  position:fixed;
+  align-items: center;
+  margin:5px;
+  width: 10%;
+  float: left;
+}
+#plus{
+  position: fixed;
+  width: 10%;
+  float: right;
+}
+#playbutton{
+  margin-top: 5%;
+  background-color: #00aeff;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  display: inline-block;
+  font-size: 1rem;
+  border: 2px solid #00aeff;
+  border-radius: 10%;
+  transition: 300ms;
+}
+
+#playbutton:hover{
+  background-color:rgb(255, 255, 255);
+  color:rgb(59, 59, 59)
+}
+
 #title{
   font-size: 2rem;
 }
@@ -20,13 +51,15 @@ body{
 .slidecontainer {
     width: 80%; /* Width of the outside container */
     margin: auto;
+    
   }
   
   /* The slider itself */
   .slider {
+    float:left;
     -webkit-appearance: none;  /* Override default CSS styles */
     appearance: none;
-    width: 100%; /* Full-width */
+    width: 80%; /* Full-width */
     height: 25px; /* Specified height */
     background: #d3d3d3; /* Grey background */
     outline: none; /* Remove outline */
@@ -35,6 +68,7 @@ body{
     transition: opacity .2s;
     border-radius: 5px;
     height: 10px;
+
   }
   
   /* Mouse-over effects */

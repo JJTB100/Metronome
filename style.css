@@ -2,12 +2,24 @@ body{
     background-color: rgb(59, 59, 59);
     color: rgb(255, 255, 255);
 
+    size: 50px;
     text-align: center;
     font-family: 'Roboto';
 }
 
+#title{
+  font-size: 2rem;
+}
+
+#BPM{
+  margin: auto;
+  margin-bottom: 3%;
+  font-size: 7rem;
+}
+
 .slidecontainer {
-    width: 100%; /* Width of the outside container */
+    width: 80%; /* Width of the outside container */
+    margin: auto;
   }
   
   /* The slider itself */
@@ -36,7 +48,7 @@ body{
     appearance: none;
     width: 25px; /* Set a specific slider handle width */
     height: 25px; /* Slider handle height */
-    background: #04AA6D; /* Green background */
+    background: #00aeff; /* Green background */
     cursor: pointer; /* Cursor on hover */
     border-radius: 50%;
     height:25px;
@@ -45,7 +57,7 @@ body{
   .slider::-moz-range-thumb {
     width: 25px; /* Set a specific slider handle width */
     height: 25px; /* Slider handle height */
-    background: #04AA6D; /* Green background */
+    background: #00aeff; /* Green background */
     cursor: pointer; /* Cursor on hover */
     height: 25px;
     border-radius: 50%;

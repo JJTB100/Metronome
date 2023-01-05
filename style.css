@@ -1,25 +1,11 @@
 body{
     background-color: rgb(59, 59, 59);
     color: rgb(255, 255, 255);
-
     size: 50px;
     text-align: center;
     font-family: 'Roboto';
 }
 
-
-#minus{
-  position:fixed;
-  align-items: center;
-  margin:5px;
-  width: 10%;
-  float: left;
-}
-#plus{
-  position: fixed;
-  width: 10%;
-  float: right;
-}
 #playbutton{
   margin-top: 5%;
   background-color: #00aeff;
@@ -28,14 +14,17 @@ body{
   text-align: center;
   display: inline-block;
   font-size: 1rem;
-  border: 2px solid #00aeff;
+  border: 0px solid #00aeff;
   border-radius: 10%;
   transition: 300ms;
+  opacity: 0.7;
 }
 
 #playbutton:hover{
-  background-color:rgb(255, 255, 255);
-  color:rgb(59, 59, 59)
+  /*background-color:rgb(100, 100, 100);*/
+  /*color:rgb(59, 59, 59)*/
+  cursor: pointer;
+  opacity: 1;
 }
 
 #title{
@@ -47,19 +36,39 @@ body{
   margin-bottom: 3%;
   font-size: 7rem;
 }
+#slidebox{
+  display:flex;
+  margin:auto;
 
+}
+#minus{
+  background-color: #3b3b3b;
+  background-image: url("minus-solid.svg");
+  border:rgb(59, 59, 59);
+  float: left;
+  cursor: pointer;
+  color: #00aeff;
+  font-weight: 1000;
+  font-size: 70;
+}
+#plus{
+  background-color: #3b3b3b;
+  background-image: url("plus-solid.svg");
+  border:rgb(59, 59, 59);
+  float: right;
+  cursor: pointer;
+}
 .slidecontainer {
-    width: 80%; /* Width of the outside container */
-    margin: auto;
-    
+    width: 100%; /* Width of the outside container */
+    float: left;
   }
   
   /* The slider itself */
   .slider {
-    float:left;
+
     -webkit-appearance: none;  /* Override default CSS styles */
     appearance: none;
-    width: 80%; /* Full-width */
+    width: 80%; 
     height: 25px; /* Specified height */
     background: #d3d3d3; /* Grey background */
     outline: none; /* Remove outline */

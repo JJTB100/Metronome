@@ -4,19 +4,22 @@
         <title>Metronome</title>
         <link rel="stylesheet" href="style.css">
         <script src="scripts.js" defer></script>
+        <audio>
+            <source src="tick.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
     </head>
     <body>
         <div id="title">
             <h1>Metronome</h1>
         </div>
         <div id="metronome">
-            <span id="BPM">
-                60
-            </span>
+            <div id="BPM">60</div>
             <div class="slidecontainer">
                 <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
             </div>
             
         </div>
+
     </body>
 </html> 

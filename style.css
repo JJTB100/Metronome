@@ -79,7 +79,7 @@ body{
   position: relative;
 }
 #slidebox{
-  display:flex;
+  display: flex;
   margin:auto;
 
 }
@@ -87,12 +87,15 @@ body{
   background-color: #3b3b3b;
   /*background-image: url("minus-solid.svg");*/
   border: none;
+  height:50%;
+  border-radius: 50%;
   float: left;
   cursor: pointer;
   font-size: 3rem;
   justify-content: center;
-
+  margin: auto;
   color: white;
+  margin-bottom: 7px;
 }
 #plus{
   background-color: #3b3b3b;
@@ -104,6 +107,7 @@ body{
   justify-content: center;
 }
 .slidecontainer {
+  
     width: 100%; /* Width of the outside container */
     float: left;
     display: flex;

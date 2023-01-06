@@ -27,7 +27,9 @@ minus.onclick = function(){
 }
 
 button.onclick = function() {
-  output.innerHTML = inputbox.value;
+  if(inputbox.value != ""){
+    output.innerHTML = inputbox.value;
+  }
   inputbox.style.opacity = "0";
   if(playing){
     playing = false;
@@ -53,6 +55,7 @@ button.onclick = function() {
 
 function playSound(){
   delay = 60000/(parseInt(output.innerHTML))
+  delay = delay - (beat.duration * 1000)
   console.log(delay)
   if(playing){
     beat.play()
@@ -62,6 +65,7 @@ function playSound(){
 
 inputbutton.onclick = function(){
   if(inputbox.style.opacity === "0"){
+    playing = false;
     console.log("Turn On")
     inputbox.style.opacity = "1.0";
     inputbox.focus();

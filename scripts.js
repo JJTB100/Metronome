@@ -57,9 +57,11 @@ function playSound(){
   delay = 60000/(parseInt(output.innerHTML))
   delay = delay - (beat.duration * 1000)
   console.log(delay)
+  
   if(playing){
     beat.play()
     setTimeout(() => {  playSound() }, delay);
+
   }
 }
 

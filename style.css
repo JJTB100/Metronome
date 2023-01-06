@@ -9,6 +9,44 @@ body{
   font-weight: bold;
   font-size: 3em;
 }
+#inputbox{
+  position: absolute;
+  z-index: 9;
+  width: 90%;
+  margin:auto;
+  border:none;
+  background-color: #3b3b3b;
+  margin-bottom: 3%;
+  font-size: 7rem;
+  color: white;
+  transition: 0.4s;
+  text-align: center;
+  opacity: 0;
+  left: 0;
+  right:0;
+}
+#inputcontainer{
+  display:flex;
+}
+#inputbutton{
+  margin-top: 5%;
+  background-color: #00aeff;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  font-size: 1rem;
+  border: 0px solid #00aeff;
+  border-radius: 10%;
+  transition: 300ms;
+  opacity: 1;
+}
+#inputbutton:hover{
+  /*background-color:rgb(100, 100, 100);*/
+  /*color:rgb(59, 59, 59)*/
+  cursor: pointer;
+  opacity: 0.7;
+}
+
 #playbutton{
   margin-top: 5%;
   background-color: #00aeff;
@@ -20,14 +58,14 @@ body{
   border: 0px solid #00aeff;
   border-radius: 10%;
   transition: 300ms;
-  opacity: 0.7;
+  opacity: 1;
 }
 
 #playbutton:hover{
   /*background-color:rgb(100, 100, 100);*/
   /*color:rgb(59, 59, 59)*/
   cursor: pointer;
-  opacity: 1;
+  opacity: 0.7;
 }
 
 #title{
@@ -38,6 +76,7 @@ body{
   margin: auto;
   margin-bottom: 3%;
   font-size: 7rem;
+  position: relative;
 }
 #slidebox{
   display:flex;
@@ -68,7 +107,7 @@ body{
     width: 100%; /* Width of the outside container */
     float: left;
     display: flex;
-  }
+}
   
   /* The slider itself */
   .slider {
@@ -80,9 +119,9 @@ body{
     height: 10px; /* Specified height */
     background: #d3d3d3; /* Grey background */
     outline: none; /* Remove outline */
-    opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+    opacity: 1; /* Set transparency (for mouse-over effects on hover) */
     -webkit-transition: .2s; /* 0.2 seconds transition on hover */
-    transition: opacity .2s;
+    transition: .2s;
     border-radius: 5px;
     
   }
@@ -90,6 +129,7 @@ body{
   /* Mouse-over effects */
   .slider:hover {
     opacity: 1; /* Fully shown on mouse-over */
+    height: 15px;
   }
   
   /* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
@@ -102,6 +142,11 @@ body{
     cursor: pointer; /* Cursor on hover */
     border-radius: 50%;
     height:25px;
+    transition: 0.2s;
+  }
+  .slider::-webkit-slider-thumb:hover {
+    width: 35px;
+    height: 35px;
   }
   
   .slider::-moz-range-thumb {

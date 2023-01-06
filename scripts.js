@@ -3,10 +3,13 @@ var output = document.getElementById("BPM");
 var button = document.getElementById("playbutton");
 var plus = document.getElementById("plus");
 var minus = document.getElementById("minus");
-
+var inputbutton = document.getElementById("inputbutton");
+var inputbox = document.getElementById("inputbox");
 let beat = new Audio("tick.mp3");
 var playing = false;
 var delay = 0;
+
+inputbox.style.opacity = "0";
 output.innerHTML = slider.value; // Display the default slider value
 
 // Update the current slider value (each time you drag the slider handle)
@@ -24,6 +27,8 @@ minus.onclick = function(){
 }
 
 button.onclick = function() {
+  output.innerHTML = inputbox.value;
+  inputbox.style.opacity = "0";
   if(playing){
     playing = false;
 
@@ -36,7 +41,7 @@ button.onclick = function() {
   }
   console.log("button press")
 
-  if(button.value === "Play"){
+  if(button.value != "Pause"){
     button.value = "Pause";
   }
   else{
@@ -52,5 +57,17 @@ function playSound(){
   if(playing){
     beat.play()
     setTimeout(() => {  playSound() }, delay);
+  }
+}
+
+inputbutton.onclick = function(){
+  if(inputbox.style.opacity === "0"){
+    console.log("Turn On")
+    inputbox.style.opacity = "1.0";
+    inputbox.focus();
+    button.value = "Set and Play"
+  }
+  else{
+    inputbox.style.opacity = "0.0";
   }
 }

@@ -21,11 +21,18 @@ slider.oninput = function() {
 }
 
 plus.onclick = function(){
-  output.innerHTML = (parseInt(output.innerHTML) + 1).toString()
+  //console.log(parseInt(output.innerHTML));
+  if(parseInt(output.innerHTML) < 200){
+    output.innerHTML = (parseInt(output.innerHTML) + 1).toString();
+  }
+  
 }
 
 minus.onclick = function(){
-  output.innerHTML = (parseInt(output.innerHTML) - 1).toString()
+  if(parseInt(output.innerHTML) > 50){
+    output.innerHTML = (parseInt(output.innerHTML) - 1).toString()
+  }
+  
 }
 
 button.onclick = function() {

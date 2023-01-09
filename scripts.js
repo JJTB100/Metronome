@@ -5,6 +5,8 @@ var plus = document.getElementById("plus");
 var minus = document.getElementById("minus");
 var inputbutton = document.getElementById("inputbutton");
 var inputbox = document.getElementById("inputbox");
+var left  = document.getElementById("left");
+var right  = document.getElementById("right");
 let beat = new Audio("tick.mp3");
 var playing = false;
 var delay = 0;
@@ -60,6 +62,18 @@ function playSound(){
   
   if(playing){
     beat.play()
+    
+    if(left.style.backgroundColor === "rgb(187, 187, 187)"){
+      
+      left.style.backgroundColor = "blue";
+      right.style.backgroundColor = "#bbb";
+      
+    }
+    else{
+      right.style.backgroundColor = "blue";
+      left.style.backgroundColor = "#bbb";
+      
+    }
     setTimeout(() => {  playSound() }, delay);
 
   }

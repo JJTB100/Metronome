@@ -9,6 +9,28 @@ body{
   font-weight: bold;
   font-size: 3em;
 }
+#left{
+  height: 25px;
+  width: 25px;
+  background-color: #bbb;
+  border-radius: 50%;
+
+  margin: auto;
+}
+#right{
+  height: 25px;
+  width: 25px;
+  background-color: #bbb;
+  border-radius: 50%;
+  margin: auto;
+
+}
+#visual{
+  margin: auto;
+  margin-top: 5%;
+  display: flex;
+  width: 20%;
+}
 #inputbox{
   position: absolute;
   z-index: 9;

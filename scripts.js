@@ -22,7 +22,7 @@ slider.oninput = function() {
 
 plus.onclick = function(){
   //console.log(parseInt(output.innerHTML));
-  if(parseInt(output.innerHTML) < 200){
+  if(parseInt(output.innerHTML) < 135){
     output.innerHTML = (parseInt(output.innerHTML) + 1).toString();
   }
   
@@ -33,34 +33,6 @@ minus.onclick = function(){
     output.innerHTML = (parseInt(output.innerHTML) - 1).toString()
   }
   
-}
-
-button.onclick = function() {
-  if(inputbox.value != ""){
-    output.innerHTML = inputbox.value;
-    slider.value = inputbox.value;
-  }
-  inputbox.style.opacity = "0";
-  if(playing){
-    playing = false;
-
-  }
-  else{
-    playing = true;
-    console.log("play");
-    playSound()
-
-  }
-  console.log("button press")
-
-  if(button.value != "Pause"){
-    button.value = "Pause";
-  }
-  else{
-    button.value = "Play"
-  }
-
-  //beat.play()
 }
 
 function playSound(){
@@ -87,10 +59,60 @@ function playSound(){
   }
 }
 
+function buttonplay(){
+  if(inputbox.value != ""){
+    output.innerHTML = inputbox.value;
+    slider.value = inputbox.value;
+  }
+  if (inputbox.value > 135 || inputbox.value < 1){
+    output.innerHTML = 60;
+    slider.value=60;
+  }
+  inputbox.style.opacity = "0";
+  if(playing){
+    playing = false;
+
+  }
+  else{
+    playing = true;
+    
+    playSound()
+
+  }
+  //console.log("button press")
+
+  if(button.value != "Pause"){
+    button.value = "Pause";
+  }
+  else{
+    button.value = "Play"
+  }
+
+  //beat.play()
+}
+
+button.onclick = function() {
+  buttonplay()
+  button.blur()
+}
+onkeydown = function(e) {
+  if (e.key == " " ||
+  e.code == "Space" ||      
+  e.keyCode == 32 )     
+
+ {
+  buttonplay()
+  button.blur()
+}
+}
+
+
+
+
+
 inputbutton.onclick = function(){
   if(inputbox.style.opacity === "0"){
     playing = false;
-    console.log("Turn On")
     inputbox.style.opacity = "1.0";
     inputbox.focus();
     button.value = "Set and Play"

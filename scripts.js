@@ -31,6 +31,7 @@ minus.onclick = function(){
 button.onclick = function() {
   if(inputbox.value != ""){
     output.innerHTML = inputbox.value;
+    slider.value = inputbox.value;
   }
   inputbox.style.opacity = "0";
   if(playing){

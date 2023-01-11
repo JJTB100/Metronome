@@ -106,27 +106,34 @@ body{
 
 }
 #minus{
-  background-color: #3b3b3b;
-  /*background-image: url("minus-solid.svg");*/
-  border: none;
-  height:50%;
-  border-radius: 50%;
+  background-color: #00aeff;
+  border:rgb(59, 59, 59);
   float: left;
   cursor: pointer;
-  font-size: 3rem;
+  color:white;
+  font-size: 3em;
   justify-content: center;
-  margin: auto;
-  color: white;
-  margin-bottom: 7px;
+  border-radius: 50%;
+  height: 1em;
+  width: 1em;
+  margin-right: 0.3em;
+}
+#metronome{
+  padding-right: 10%;
+  padding-left: 10%;
 }
 #plus{
-  background-color: #3b3b3b;
+  background-color: #00aeff;
   border:rgb(59, 59, 59);
   float: right;
   cursor: pointer;
   color:white;
   font-size: 3rem;
   justify-content: center;
+  border-radius: 50%;
+  height: 1em;
+  width: 1em;
+  margin-left: 0.3em;
 }
 .slidecontainer {
   

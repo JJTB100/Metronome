@@ -43,7 +43,7 @@ function playSound(){
   if(playing){
     beat.play()
     
-    if(left.style.backgroundColor === "rgb(187, 187, 187)"){
+    if(left.style.backgroundColor == "rgb(187, 187, 187)"){
       
       left.style.backgroundColor = "blue";
       right.style.backgroundColor = "#bbb";
@@ -111,7 +111,7 @@ onkeydown = function(e) {
 
 
 inputbutton.onclick = function(){
-  if(inputbox.style.opacity === "0"){
+  if(inputbox.style.opacity == "0"){
     playing = false;
     inputbox.style.opacity = "1.0";
     inputbox.focus();

@@ -106,35 +106,40 @@ body{
 
 }
 #minus{
-  background-color: #00aeff;
+  background: rgba(255, 255, 255, 0);
   border:rgb(59, 59, 59);
   float: left;
   cursor: pointer;
   color:white;
   font-size: 3em;
   justify-content: center;
-  border-radius: 50%;
-  height: 1em;
-  width: 1em;
-  margin-right: 0.3em;
+  margin-bottom: 8px;
+  padding: 0.6em;
+  transition: 200ms;
 }
 #metronome{
   padding-right: 10%;
   padding-left: 10%;
 }
 #plus{
-  background-color: #00aeff;
-  border:rgb(59, 59, 59);
+  background: rgba(255, 255, 255, 0);
+  border: none;
   float: right;
   cursor: pointer;
   color:white;
   font-size: 3rem;
   justify-content: center;
-  border-radius: 50%;
-  height: 1em;
-  width: 1em;
-  margin-left: 0.3em;
+  transition: 200ms;
+  padding: 0.6em;
+  margin-bottom: 8px;
 }
+#plus:hover{
+  text-shadow: 0px 0px 20px 10px#00ffff;
+}
+#minus:hover{
+  text-shadow: 0px 0px 20px #00ffff;
+}
+
 .slidecontainer {
   
     width: 100%; /* Width of the outside container */
@@ -163,6 +168,7 @@ body{
   .slider:hover {
     opacity: 1; /* Fully shown on mouse-over */
     height: 15px;
+
   }
   
   /* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
@@ -180,6 +186,8 @@ body{
   .slider::-webkit-slider-thumb:hover {
     width: 35px;
     height: 35px;
+    box-shadow: 0px 0px 20px 10px #a8ffff;
+
   }
   
   .slider::-moz-range-thumb {

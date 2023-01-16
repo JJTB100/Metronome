@@ -24,6 +24,7 @@ plus.onclick = function(){
   //console.log(parseInt(output.innerHTML));
   if(parseInt(output.innerHTML) < 135){
     output.innerHTML = (parseInt(output.innerHTML) + 1).toString();
+    slider.value = output.innerHTML;
   }
   
 }
@@ -31,6 +32,7 @@ plus.onclick = function(){
 minus.onclick = function(){
   if(parseInt(output.innerHTML) > 50){
     output.innerHTML = (parseInt(output.innerHTML) - 1).toString()
+    slider.value = output.innerHTML;
   }
   
 }
